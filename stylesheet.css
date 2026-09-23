@@ -171,8 +171,8 @@ button{
 }
 
 #output{
-    /*50% of the width of #calculator*/
-    width: 50%;
+    /*100% of the width of #calculator*/
+    width: 100%;
     /*set height of output box to 10vh*/
     height: 10vh;
     /*turns output into a flexbox container*/
