@@ -1,6 +1,7 @@
 let outputNum = document.getElementById("output");
 
 /*Function to know if the output is negative (red) or positive*/
+/*Learned how to use from: Lecture 03, page 14*/
 function isResultRed(){
     if(Number(outputNum.innerHTML) < 0){
         outputNum.style.color = "red";
