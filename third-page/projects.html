@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+        <title>Projects | Resume</title>
+    </head>
+
+    <body>
+        <div id="page-wrapper">
+            <header>
+                <!-- Header of page -->
+                <h1>Jorge Pereiras</h1>
+                <p>Online Resume</p>
+            </header>
+
+            <div id="container">
+                <!-- Nav for all internal webpages -->
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../first-page/education.html">Education</a></li>
+                        <li><a href="../second-page/experience.html">Experience</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="../fourth-page/skills.html">Skills</a></li>
+                        <li><a href="../fifth-page/activities.html">Activities</a></li>
+                    </ul>
+                </nav>
+
+                <main>
+                    <h3>Projects</h3>
+
+                    <!-- Calculator inputs, buttons, and output -->
+                    <div id="calculator">
+                        <h3>CALCULATOR</h3>
+                        <label for="num1"></label>
+                        <input type="text" id="num1" placeholder="">
+                        <label for="num2"></label>
+                        <input type="text" id="num2" placeholder="">
+
+                        <div id="buttons-first">
+                        <button onclick="doAdd()">+</button>
+                        <button onclick="doSubtract()">-</button>
+                        <button onclick="doMultiply()">*</button>
+                        </div>
+
+                        <div id="buttons-second">
+                        <button onclick="doDivide()">/</button>
+                        <button onclick="doPower()">**</button>
+                        <button onclick="doClear()">Clear</button>
+                        </div>
+
+                        <h3 id="output"></h3>
+                    </div>
+                    <script src="../index.js"></script>
+                </main>
+            </div>
+
+            <footer>
+                <!-- Footer of page -->
+                <p>All rights reserved by Jorge Pereiras <a href="">Credits</a> &#169;</p>
+            </footer>
+        </div>
+    </body>
+</html>

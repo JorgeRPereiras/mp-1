@@ -1,0 +1,248 @@
+*{
+    /*Universal selector for margin and box-sizing*/
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*div id page-wrapper that includes header, nav, and main*/
+#page-wrapper{
+    background-color: #F1DEC9;
+    /*90% width of <body>*/
+    width: 90%;
+    /*vertical margin of (0) and horizontal margin in (auto)*/
+    margin: 0 auto;
+    /*font in form of [font-style] [font-variant] [font-weight] [font-size] [font-family]*/
+    font: normal small-caps bold calc(2px + 2vw) verdana, arial, helvetica, sans-serif;
+}
+
+/*Affects both header and footer*/
+header, footer {
+    /*font in form of [font-style] [font-variant] [font-weight] [font-size] [font-family]*/
+    font: normal small-caps bold calc(2px + 2vw) copperplate, papyrus, fantasy;
+    /*padding to the left of header and footer*/
+    padding-left: 3%;
+    background-color: #8D7B68;
+    color: #F1DEC9;
+}
+
+/*div id container that includes nav and main*/
+#container{
+    /*100% width of #page-wrapper*/
+    width: 100%;
+    /*turns #container into a flexbox container*/
+    display: flex;
+    /*let nav and main be arrange horizontally (next to each other)*/
+    flex-direction: row;
+    /*No white spaces at the bottom*/
+    height: 100vh;
+}
+
+nav{
+    /*30% of the width of #container*/
+    width: 30%;
+    background-color: #A4907C;
+}
+
+nav ul{
+    /*removes left padding of <ul>*/
+    padding-left: 0;
+    /*removes the bullet points*/
+    list-style: none;
+    /*turns <ul> into a flexbox container*/
+    display: flex;
+    /*shows <li> elements vertically*/
+    flex-direction: column;
+}
+
+nav li{
+    border: solid #8D7B68 8px;
+    background-color: #8D7B68;
+    /*centers the text inside*/
+    text-align: center;
+    /*12% margin in all for directions*/
+    margin: 12%;
+}
+
+nav a{
+    color: #F1DEC9;
+    /*removes the underline*/
+    text-decoration: none;
+}
+
+main{
+    /*70% of the width of #container*/
+    width: 70%;
+    padding: 2%;
+    /*replaces font variant from small-caps to normal*/
+    font-variant: normal;
+    color: #A4907C;
+}
+
+main h3{
+    /*centers the text inside*/
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.subtitle{
+    /*removes the text-align center from main h3*/
+    text-align: left;
+    clear: both;
+}
+
+img{
+    border: solid #8D7B68 8px;
+    background-color: white;
+    margin-right: 3%;
+}
+
+#home-img{
+    /*size of image*/
+    max-width: 50%;
+    /*makes an element move to the left side of its container, allowing <p> to flow around it*/
+    /*learned how to use this from: https://www.w3schools.com/css/css_float.asp*/
+    float: left;
+}
+
+.education{
+    /*makes sure the element goes below the floated image instead of going beside it*/
+    clear: both;
+}
+
+.education-img{
+    /*size of image*/
+    max-width: 20%;
+    /*makes an element move to the left side of its container, allowing <p> to flow around it*/
+    /*learned how to use this from: https://www.w3schools.com/css/css_float.asp*/
+    float: left;
+    padding: 1%;
+    margin-bottom: 5%;
+}
+
+.experience-img{
+    /*size of image*/
+    max-width: 20%;
+    /*makes an element move to the left side of its container, allowing <p> to flow around it*/
+    /*learned how to use this from: https://www.w3schools.com/css/css_float.asp*/
+    float: left;
+    margin-bottom: 5%;
+}
+
+main p, main ul{
+    color: #8D7B68;
+    /*replaces font weight from bold to normal*/
+    font-weight: normal;
+    font-size: calc(2px + 1.5vw);
+}
+
+#calculator{
+    border: solid #8D7B68 8px;
+    padding: 5%;
+    /*use an image as a background instead of a color*/
+    /*learned how to use this from: https://www.w3schools.com/cssref/pr_background-image.php*/
+    background-image: url("images/Calc-img.png");
+}
+
+input, button, #output, #calculator h3{
+    border: solid #8D7B68 8px;
+    /*centers the text inside*/
+    text-align: center;
+    /*font in form of [font-style] [font-variant] [font-weight] [font-size] [font-family]*/
+    font: normal small-caps bold calc(2px + 4vw) copperplate, papyrus, fantasy;
+    background-color: #A4907C;
+    color: #F1DEC9;
+}
+
+input{
+    /*50% of the width of #calculator*/
+    width: 50%;
+    /*turns item into a block level element*/
+    display: block;
+    /*top margin in (auto), horizontal margin in (auto), and bottom margin of (2%)*/
+    margin: auto auto 2%;
+}
+
+button{
+    /*20% of the width of #calculator*/
+    width: 20%;
+    /*top margin in (auto), horizontal margin in (auto), and bottom margin of (2%)*/
+    margin: auto auto 2%;
+    font-size: calc(2px + 2vw);
+}
+
+#output{
+    /*50% of the width of #calculator*/
+    width: 50%;
+    /*set height of output box to 10vh*/
+    height: 10vh;
+    /*turns output into a flexbox container*/
+    display: flex;
+    /*justify-center: center and align-items: center, centers the content inside the box*/
+    justify-content: center;
+    align-items: center;
+    /*top margin of (5%), right margin in (auto), bottom margin of (2%), and left margin in (auto)*/
+    margin: 5% auto 2% auto;
+}
+
+#buttons-first{
+    /*turns output into a flexbox container*/
+    display: flex;
+    /*top margin of (10%), horizontal margin in (auto), and bottom margin in (auto)*/
+    margin: 10% auto auto;
+}
+
+#buttons-second{
+    /*turns output into a flexbox container*/
+    display: flex;
+    /*auto margin in all for directions*/
+    margin: auto;
+}
+
+/*change display when screen is less than 900px horizontally*/
+@media screen and (max-width: 900px){
+    /*makes header now centered and bigger*/
+    header{
+        text-align: center;
+        font-size: calc(2px + 2.5vw);
+    }
+
+    /*let nav and main be arrange vertically (on top of each other)*/
+    #container{
+        flex-direction: column;
+    }
+
+    nav{
+        /*100% of the width of #container*/
+        width: 100%;
+    }
+
+    nav ul{
+        /*shows <li> elements horizontally*/
+        flex-direction: row;
+        /*centers the <li> elements horizontally inside the <ul>*/
+        justify-content: center;
+    }
+
+    nav li{
+        margin: 1%;
+    }
+
+    nav a{
+        font-size: calc(2px + 1.75vw);
+    }
+
+    main{
+        /*100% of the width of #container*/
+        width: 100%;
+    }
+
+    #home-img{
+        /*turns item into a block level element*/
+        display: block;
+        /*top margin in (auto), horizontal margin in (auto), and bottom margin of (2%)*/
+        margin: auto auto 2%;
+        /*removes the float: left*/
+        /*learned how to use this from: https://www.w3schools.com/css/css_float.asp*/
+        float: none;
+    }
+}
